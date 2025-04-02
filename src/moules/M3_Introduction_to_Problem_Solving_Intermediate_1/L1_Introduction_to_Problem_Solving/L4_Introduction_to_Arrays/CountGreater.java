@@ -1,22 +1,22 @@
-package moules.Intermediate_DSA.L4_Introduction_to_Arrays;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving.L4_Introduction_to_Arrays;
 
 public class CountGreater {
 
   static int countGreaterThenItSelf(int[] A) {
-    int count = 0;
     int maxValue = Integer.MIN_VALUE;
+    int ans = 0;
 
     for (int ele: A) {
       maxValue = Math.max(maxValue, ele);
     }
 
     for (int ele: A) {
-      if (ele != maxValue) {
-        count++;
+      if (ele < maxValue) {
+        ans++;
       }
     }
 
-    return count;
+    return ans;
   }
 
   public static void main(String[] args) {

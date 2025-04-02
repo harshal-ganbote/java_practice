@@ -1,4 +1,4 @@
-package moules.Intermediate_DSA.L1_Introduction_to_Problem_Solving;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving;
 
 public class MakeIt {
 

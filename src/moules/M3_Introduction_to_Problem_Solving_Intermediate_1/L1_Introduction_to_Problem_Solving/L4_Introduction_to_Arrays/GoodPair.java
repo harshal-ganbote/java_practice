@@ -1,12 +1,12 @@
-package moules.Intermediate_DSA.L4_Introduction_to_Arrays;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving.L4_Introduction_to_Arrays;
 
 public class GoodPair {
 
   static int goodPair(int[] A, int B) {
     int N = A.length;
 
-    for (int index = 0; index < N -1;index ++) {
-      for (int jIndex = index + 1; jIndex < N; jIndex++) {
+    for (int index = 0; index < N; index++) {
+      for (int jIndex = index + 1;jIndex < N; jIndex++) {
         if (A[index] + A[jIndex] == B) {
           return 1;
         }

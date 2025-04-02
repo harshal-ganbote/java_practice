@@ -1,4 +1,4 @@
-package moules.Intermediate_DSA.L1_Introduction_to_Problem_Solving;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving;
 
 public class PerfectNumber {
 
@@ -10,10 +10,12 @@ public class PerfectNumber {
 
     int sum = 1;
 
-    for (int num = 2; num * num < A; num++) {
+    for (int num = 2; num * num <= A; num++) {
       if (A % num == 0) {
         sum += num;
-        sum += A / num;
+        if (num * num != A) {
+          sum += A / num;
+        }
       }
     }
 

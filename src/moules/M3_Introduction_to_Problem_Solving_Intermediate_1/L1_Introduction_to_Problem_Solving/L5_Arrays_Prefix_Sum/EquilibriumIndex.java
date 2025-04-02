@@ -1,15 +1,24 @@
-package moules.Intermediate_DSA.L5_Arrays_Prefix_Sum;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving.L5_Arrays_Prefix_Sum;
 
 public class EquilibriumIndex {
 
   static int findEquilibriumIndex(int[] A) {
     int N = A.length;
-    int[] prefixSum = PrefixSum.prefixSum(A);
+    int[] prefixSum = new int[N];
+    prefixSum[0] = A[0];
 
+    for (int index = 1; index < N; index++) {
+      prefixSum[index] = prefixSum[index-1] + A[index];
+    }
 
     for (int index = 0; index < N; index++) {
-      int leftSum = index == 0 ? 0 : prefixSum[index -1];
-      int rightSum = prefixSum[N-1] - prefixSum[index];
+      int leftSum = 0;
+      int rightSum;
+
+      if (index > 0) {
+        leftSum = prefixSum[index-1];
+      }
+      rightSum = prefixSum[N-1] - prefixSum[index];
 
       if (leftSum == rightSum) {
         return index;

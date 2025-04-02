@@ -1,21 +1,21 @@
-package moules.Intermediate_DSA.L1_Introduction_to_Problem_Solving;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving;
 
 public class IsPrime {
 
   static int countFactors(int A) {
-    int ans = 0;
+    int count = 0;
 
     for (int num = 1; num * num <= A; num++) {
       if (A % num == 0) {
-        ans += num * num == A ? 1 : 2;
+        count += num * num == A ? 1 : 2;
+      }
 
-        if (ans > 2) {
-          break;
-        }
+      if (count > 2) {
+        return count;
       }
     }
 
-    return ans;
+    return count;
   }
 
   static int isPrime(int A) {

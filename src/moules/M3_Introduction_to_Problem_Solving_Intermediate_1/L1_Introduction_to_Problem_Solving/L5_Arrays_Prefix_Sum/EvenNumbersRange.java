@@ -1,4 +1,4 @@
-package moules.Intermediate_DSA.L5_Arrays_Prefix_Sum;
+package moules.M3_Introduction_to_Problem_Solving_Intermediate_1.L1_Introduction_to_Problem_Solving.L5_Arrays_Prefix_Sum;
 
 import java.util.Arrays;
 
@@ -9,8 +9,9 @@ public class EvenNumbersRange {
     int[] prefixSum = new int[N];
 
     prefixSum[0] = (A[0] & 1) == 0 ? 1 : 0;
+
     for (int index = 1; index < N; index++) {
-      prefixSum[index] = prefixSum[index - 1] + ((A[index] & 1) == 0 ? 1 : 0);
+      prefixSum[index] = prefixSum[index-1] + ((A[index] & 1) == 0 ? 1 : 0);
     }
 
     return prefixSum;
